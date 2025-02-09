@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/backgroundColor"
+    android:padding="0dp">
+
+    <!-- Toolbar with Popup Menu Style -->
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/primaryColor"
+        android:title="@string/app_name"
+        android:titleTextColor="@color/textColor"
+        app:popupTheme="@style/PopupMenuStyle"
+        android:elevation="4dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:contentDescription="Zakat Calculator Scroll View">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="16dp">
+
+            <!-- Gold Bar Image -->
+            <ImageView
+                android:id="@+id/goldBarImage"
+                android:layout_width="200dp"
+                android:layout_height="150dp"
+                android:layout_marginTop="16dp"
+                android:src="@drawable/gold_bar"
+                android:contentDescription="Image of gold bars" />
+
+            <!-- Input Fields -->
+            <EditText
+                android:id="@+id/weightInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Weight of Gold (g)"
+                android:inputType="number"
+                android:layout_marginTop="16dp"
+                android:backgroundTint="@color/primaryColor"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/hintTextColor"
+                android:contentDescription="Input field for weight of gold" />
+
+            <EditText
+                android:id="@+id/goldValueInput"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Enter Current Gold Value (RM/g)"
+                android:inputType="numberDecimal"
+                android:layout_marginTop="8dp"
+                android:backgroundTint="@color/primaryColor"
+                android:textColor="@color/textColor"
+                android:textColorHint="@color/hintTextColor"
+                android:contentDescription="Input field for current gold value" />
+
+            <!-- Radio Group -->
+            <RadioGroup
+                android:id="@+id/typeSelector"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="12dp"
+                android:contentDescription="Select type of gold">
+
+                <RadioButton
+                    android:id="@+id/keepGold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Keep"
+                    android:textColor="@color/textColor"
+                    android:contentDescription="Select if the gold is kept" />
+
+                <RadioButton
+                    android:id="@+id/wearGold"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Wear"
+                    android:textColor="@color/textColor"
+                    android:layout_marginStart="16dp"
+                    android:contentDescription="Select if the gold is worn" />
+            </RadioGroup>
+
+            <!-- Calculate Button -->
+            <Button
+                android:id="@+id/calculateButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="CALCULATE"
+                android:layout_marginTop="16dp"
+                android:background="@color/primaryColor"
+                android:textColor="@color/textColor"
+                android:elevation="4dp"
+                android:contentDescription="Button to calculate zakat" />
+
+            <!-- Result Section -->
+            <TextView
+                android:id="@+id/labelTotalGoldValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total gold value:"
+                android:textColor="@color/textColor"
+                android:layout_marginTop="16dp"
+                android:contentDescription="Label for total gold value" />
+
+            <TextView
+                android:id="@+id/totalGoldValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RM 00.00"
+                android:textColor="@color/textColor"
+                android:contentDescription="Total gold value result" />
+
+            <TextView
+                android:id="@+id/labelZakatPayableValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Gold value that is zakat payable:"
+                android:textColor="@color/textColor"
+                android:layout_marginTop="8dp"
+                android:contentDescription="Label for zakat payable value" />
+
+            <TextView
+                android:id="@+id/zakatPayableValue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RM 00.00"
+                android:textColor="@color/textColor"
+                android:contentDescription="Zakat payable value result" />
+
+            <TextView
+                android:id="@+id/labelTotalZakat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Total zakat:"
+                android:textColor="@color/textColor"
+                android:layout_marginTop="8dp"
+                android:contentDescription="Label for total zakat" />
+
+            <TextView
+                android:id="@+id/totalZakat"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="RM 00.00"
+                android:textColor="@color/textColor"
+                android:contentDescription="Total zakat result" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

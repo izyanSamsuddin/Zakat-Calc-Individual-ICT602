@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="primaryColor">#FFD700</color> <!-- Lemon Chiffon (for Toolbar & Button) -->
+    <color name="accentColor">#FFFACD</color>  <!-- Matching Button Color with Toolbar -->
+    <color name="backgroundColor">#FFFFF0</color> <!-- Light Yellow Background -->
+    <color name="hintTextColor">#B0BEC5</color> <!-- Hint Text Color (Grayish) -->
+    <color name="textColor">#000000</color>     <!-- Black for Better Contrast -->
+    <color name="habib_gold">#FFD700</color>    <!-- Gold Color -->
+</resources>

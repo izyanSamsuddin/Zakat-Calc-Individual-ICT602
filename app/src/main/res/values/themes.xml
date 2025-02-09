@@ -1,0 +1,18 @@
+<resources xmlns:tools="http://schemas.android.com/tools">
+
+    <!-- Base App Theme -->
+    <style name="Theme.ZakatCalc" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <item name="colorPrimary">@color/primaryColor</item>       <!-- Gold -->
+        <item name="colorPrimaryDark">#DAA520</item>              <!-- Darker Gold -->
+        <item name="colorAccent">@color/primaryColor</item>       <!-- Gold -->
+        <item name="actionOverflowMenuStyle">@style/PopupMenuStyle</item> <!-- Connects to PopupMenuStyle -->
+    </style>
+
+    <!-- Popup Menu (3-dot icon) Theme -->
+    <style name="PopupMenuStyle" parent="Widget.AppCompat.PopupMenu">
+        <item name="android:popupBackground">#FFFFF0</item> <!-- Lilac Purple Background -->
+        <item name="android:textColor">#000000</item>       <!-- Black Text for Menu Items -->
+        <item name="android:popupElevation">8dp</item>      <!-- Add Shadow for Popup Menu -->
+    </style>
+
+</resources>

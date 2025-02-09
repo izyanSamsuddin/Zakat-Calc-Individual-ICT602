@@ -1,0 +1,129 @@
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="#FFFFF0"> <!-- Matching Background -->
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#FFD700"
+        android:title="About"
+        android:titleTextColor="#000000"
+        android:elevation="4dp"
+        app:popupTheme="@style/ThemeOverlay.AppCompat.Light" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp"
+        android:background="#FFFFF0"> <!-- Matching Background -->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center_horizontal"
+            android:padding="16dp"
+            android:background="#FFFFF0"
+            android:elevation="4dp"
+            android:layout_margin="8dp"
+            android:paddingTop="24dp"
+            android:paddingBottom="24dp">
+
+            <!-- Profile Image -->
+            <ImageView
+                android:id="@+id/profilePhoto"
+                android:layout_width="150dp"
+                android:layout_height="150dp"
+                android:src="@drawable/my_passport"
+                android:contentDescription="Profile Photo"
+                android:scaleType="centerCrop"
+                android:background="#FFD700"
+                android:padding="4dp"
+                android:layout_marginBottom="16dp"
+                android:layout_gravity="center"
+                android:clipToOutline="true" />
+
+            <!-- Name -->
+            <TextView
+                android:id="@+id/profileName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Farah Izyan binti Samsuddin"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:layout_marginBottom="4dp" />
+
+            <!-- Matric Number -->
+            <TextView
+                android:id="@+id/matricNumber"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Matric Number: 2023248282"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginBottom="4dp" />
+
+            <!-- Course -->
+            <TextView
+                android:id="@+id/course"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Course: CDCS240"
+                android:textSize="16sp"
+                android:textColor="#000000"
+                android:layout_marginBottom="4dp" />
+
+            <!-- Divider Line -->
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="#000000"
+                android:layout_marginTop="12dp"
+                android:layout_marginBottom="12dp" />
+
+            <!-- GitHub Section -->
+            <TextView
+                android:id="@+id/githubTitle"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="GitHub Repository:"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                android:textColor="#000000"
+                android:layout_marginBottom="4dp" />
+
+            <!-- GitHub Button -->
+            <Button
+                android:id="@+id/githubButton"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Visit GitHub"
+                android:background="#FFFACD"
+                android:textColor="#000000"
+                android:padding="8dp"
+                android:elevation="4dp"
+                android:layout_marginTop="8dp"
+                android:contentDescription="Button to open GitHub Repository" />
+
+            <!-- Footer -->
+            <TextView
+                android:id="@+id/footer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="© 2025 Farah Izyan. All rights reserved."
+                android:textSize="14sp"
+                android:textColor="#000000"
+                android:gravity="center"
+                android:layout_marginTop="20dp" />
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
